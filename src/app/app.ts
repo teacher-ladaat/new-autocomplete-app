@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { List } from './list/list';
 import { Item } from './shared/item';
+import { Autocomplete } from "./autocomplete/autocomplete";
 
 @Component({
   selector: 'app-root',
-  imports: [List],
+  imports: [List, Autocomplete],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
