@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Item } from '../shared/item';
 
 @Component({
@@ -8,11 +8,5 @@ import { Item } from '../shared/item';
   styleUrl: './list.scss',
 })
 export class List {
-  items: Item[] = [
-    new Item('red'),
-    new Item('green'),
-    new Item('blue'),
-    new Item('yellow'),
-    new Item('pink'),
-  ];
+  items = input.required<Item[]>();
 }

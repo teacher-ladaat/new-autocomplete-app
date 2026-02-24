@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { List } from './list/list';
+import { Item } from './shared/item';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [List],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('new-autocomplete-app');
+  colors: Item[] = [
+    new Item('red'),
+    new Item('green'),
+    new Item('blue'),
+    new Item('yellow'),
+    new Item('pink'),
+  ];
+
+  cities: Item[] = [
+    { id: 100, title: 'Jerusalem' },
+    { id: 110, title: 'Elad' },
+    { id: 120, title: 'Tel Aviv' },
+  ];
 }
