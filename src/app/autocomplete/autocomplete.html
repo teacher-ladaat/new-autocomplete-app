@@ -1,4 +1,4 @@
 <div [style.background]="bgColor()">
-  <app-input [name]="inputName()"></app-input>
-  <app-list [items]="list()"></app-list>
+  <app-input [name]="inputName()" (search)="searchInList($event)"></app-input>
+  <app-list [items]="filteredList"></app-list>
 </div>
