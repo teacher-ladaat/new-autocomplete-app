@@ -1,5 +1,3 @@
-<ul>
-  @for (item of items(); track item.id) {
-    <li>{{ item.title }}</li>
-  }
-</ul>
+@for (item of items(); track item.id) {
+  <app-list-item [item]="item"></app-list-item>
+}
