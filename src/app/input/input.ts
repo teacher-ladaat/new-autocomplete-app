@@ -8,5 +8,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './input.scss',
 })
 export class Input {
+    name = input.required<string>();
+
     text = '';
 }

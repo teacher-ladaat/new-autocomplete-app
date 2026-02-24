@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { Input } from "../input/input";
-import { List } from "../list/list";
+import { Input } from '../input/input';
+import { List } from '../list/list';
 import { Item } from '../shared/item';
 
 @Component({
@@ -10,6 +10,7 @@ import { Item } from '../shared/item';
   styleUrl: './autocomplete.scss',
 })
 export class Autocomplete {
+  inputName = input.required<string>();
   list = input.required<Item[]>();
   bgColor = input<string>('lightblue');
 }
