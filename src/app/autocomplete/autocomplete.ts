@@ -10,5 +10,6 @@ import { Item } from '../shared/item';
   styleUrl: './autocomplete.scss',
 })
 export class Autocomplete {
-    list = input.required<Item[]>();
+  list = input.required<Item[]>();
+  bgColor = input<string>('lightblue');
 }
