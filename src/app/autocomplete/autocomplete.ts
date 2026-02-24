@@ -1,4 +1,4 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, input, model, OnInit } from '@angular/core';
 import { Input } from '../input/input';
 import { List } from '../list/list';
 import { Item } from '../shared/item';
@@ -11,6 +11,7 @@ import { Item } from '../shared/item';
 })
 export class Autocomplete implements OnInit {
   inputName = input.required<string>();
+  value = model<string>('', { alias: 'value' });
 
   list = input.required<Item[]>();
   filteredList: Item[] = [];
@@ -22,6 +23,7 @@ export class Autocomplete implements OnInit {
   }
 
   searchInList(text: string) {
+    this.value.set(text);
     this.filteredList = this.list().filter((el) =>
       el.title.toLowerCase().includes(text.toLowerCase()),
     );

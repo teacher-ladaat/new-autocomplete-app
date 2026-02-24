@@ -9,6 +9,7 @@ import { Autocomplete } from "./autocomplete/autocomplete";
   styleUrl: './app.scss',
 })
 export class App {
+  favoriteColor = '';
   colors: Item[] = [
     new Item('red'),
     new Item('green'),
@@ -17,6 +18,7 @@ export class App {
     new Item('pink'),
   ];
 
+  userAddress = '';
   cities: Item[] = [
     { id: 100, title: 'Jerusalem' },
     { id: 110, title: 'Elad' },

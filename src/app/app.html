@@ -1,2 +1,13 @@
-<app-autocomplete inputName="favorite-color" [list]="colors" bgColor="pink" ></app-autocomplete>
-<app-autocomplete inputName="address" [list]="cities"></app-autocomplete>
+<app-autocomplete
+ inputName="favorite-color"
+  [list]="colors"
+  [(value)]="favoriteColor" bgColor="pink"></app-autocomplete>
+
+<app-autocomplete
+ inputName="address"
+  [list]="cities"
+  [(value)]="userAddress"></app-autocomplete>
+
+<h1>Your Details</h1>
+<p>favorite color: {{favoriteColor}}</p>
+<p>address: {{userAddress}}</p>
