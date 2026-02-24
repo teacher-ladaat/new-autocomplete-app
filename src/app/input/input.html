@@ -2,4 +2,5 @@
     autocomplete="off"
     [name]="name()"
     title="you entered {{text.length}} characters"
-    [(ngModel)]="text">
+    [(ngModel)]="text"
+    (input)="onInput()">
