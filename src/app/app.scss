@@ -1,3 +1,12 @@
 app-autocomplete {
-    margin: 8px;
+    margin: 8px auto;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    max-width: 400px;
 }
